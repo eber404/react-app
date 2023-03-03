@@ -8,8 +8,6 @@ RUN npm run build
 
 FROM node:lts-alpine AS deploy
 
-WORKDIR /build
-
-RUN npm i serve
+RUN cd build
 
 CMD npx serve -l 8080
