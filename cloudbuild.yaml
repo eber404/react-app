@@ -5,14 +5,14 @@ steps:
       [
         'build',
         '-t',
-        'southamerica-east1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/react-app',
+        'southamerica-east1.pkg.dev/${PROJECT_ID}/my-docker-repo/react-app',
         '.',
       ]
 
   # Docker Push
-  #- name: 'gcr.io/cloud-builders/docker'
-  #  args:
-  #    [
-  #      'push',
-  #      'southamerica-east1.pkg.dev/${PROJECT_ID}/my-docker-repo/react-app',
-  #    ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'southamerica-east1.pkg.dev/${PROJECT_ID}/my-docker-repo/react-app',
+      ]
