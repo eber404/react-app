@@ -13,4 +13,4 @@ COPY . .
 
 RUN npm i serve
 
-CMD ["npx", "serve", "-l", "8080"]
+CMD npx serve -l 8080
