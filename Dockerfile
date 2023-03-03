@@ -8,8 +8,7 @@ RUN npm run build
 
 FROM node:lts-alpine AS deploy
 
-WORKDIR /app
-COPY . .
+WORKDIR /build
 
 RUN npm i serve
 
