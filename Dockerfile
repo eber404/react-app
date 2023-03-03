@@ -1,4 +1,4 @@
-FROM node:lts-alpine AS build
+FROM node:lts-alpine
 
 WORKDIR /app
 COPY . .
@@ -6,4 +6,4 @@ COPY . .
 RUN npm i
 RUN npm run build
 
-CMD npm run serve
+CMD PORT=$PORT npm run serve

@@ -1,8 +1,9 @@
 require('dotenv/config')
 const express = require('express')
-
 const server = express()
 
-server.use(express.static('build'))
+const PORT = process.env.PORT
 
-server.listen(8080, () => console.log('listening on port', 8080))
+server.use('/', express.static('build'))
+
+server.listen(PORT, () => console.log('listening on port', PORT))
