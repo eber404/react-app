@@ -1,10 +1,9 @@
-FROM node:lts-alpine AS build-env
+FROM node:lts-alpine AS build
 
 WORKDIR /app
 COPY . .
 
 RUN npm i
 RUN npm run build
-RUN cd build
 
-CMD npx serve -l 8080
+CMD npm run serve
