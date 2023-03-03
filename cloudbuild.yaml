@@ -1,5 +1,5 @@
 steps:
-  #
+  # Docker Build
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
@@ -7,4 +7,12 @@ steps:
         '-t',
         'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/react-app',
         '.',
+      ]
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage',
       ]
